@@ -9,8 +9,9 @@ import Navbar from '../components/navbar';
 const LoginPage = () => {
   const [mobileNumber, setMobileNumber] = useState('');
   const [ShowOTPInput, setShowOTPInput] = useState(false);
-  const [loginButtonClicked, setLoginButtonClicked] = useState(false);
   
+  const [generatedOtp, setGeneratedOtp] = useState(null)
+
   const length= 4
   const [otp, setOtp] = useState(Array.from({ length }, () => ''));
 
@@ -34,8 +35,7 @@ const LoginPage = () => {
     setMobileNumber(numbersOnly);
   };
 
- // Generating OTP
-  const generatedOtp = Math.floor(1000 + Math.random() *9000);
+
  
 // Send OTP button error and OTP generation
   const handleSendOTP = () => {
@@ -43,8 +43,11 @@ const LoginPage = () => {
     if (mobileNumber.trim() === ''){
       toast.error('Please enter your mobile number first.');
     } else {   
+      // Generating OTP
+      const newOtp = Math.floor(1000 + Math.random() *9000);
+      setGeneratedOtp(newOtp)
       // toastify a random OTP      
-      toast.success(`Sending ${generatedOtp} to mobile number:, ${mobileNumber}`);      
+      toast.success(`Sending ${newOtp} to mobile number:, ${mobileNumber}`);      
       setShowOTPInput(true);
       
     }
@@ -61,8 +64,8 @@ const LoginPage = () => {
     newOtp[index] = value.substring(value.length - 1);
     setOtp(newOtp);
 
-    const combinedOtp = newOtp.join("");
-    if (combinedOtp.length === length) handleOtpSubmit(combinedOtp)
+    // const combinedOtp = newOtp.join("");
+    // if (combinedOtp.length === length) handleOtpSubmit(combinedOtp)
 
     // Move to next input if curret field is filled
     if (value && index < length -1 && inputRefs.current[index+1]){
@@ -91,9 +94,8 @@ const LoginPage = () => {
 
   const handleOtpSubmit = () => {
     const enteredOtp = otp.join('');
-
+    console.log(enteredOtp)
     if (enteredOtp === generatedOtp.toString()) {
-      setLoginButtonClicked(true);
       toast.success('Login Successful!');
     } else{
       toast.error('Invalid Otp. Please try again.');

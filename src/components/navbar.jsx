@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-3 flex justify-between items-center rounded-b-md ">
+    <nav className="bg-gray-800 p-3 flex justify-between items-center rounded-b ">
       <div className="text-white">
         <Link to="/" className="text-2xl font-bold mb-10">
           My Components
