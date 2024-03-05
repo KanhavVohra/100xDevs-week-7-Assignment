@@ -9,6 +9,7 @@ function Profile() {
     followers: '80K',
     likes: '803K',
     photos: '1.4K',
+    
   });
 
   const generateRandomUser = async () => {
@@ -35,27 +36,38 @@ function Profile() {
   return (
     <div className="min-h-screen bg-gray-100">
       <Navbar />
-      <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-md shadow-md">
-        <div className="text-center">
-          <img className="w-20 h-20 mx-auto mb-4 rounded-full" src={profileData.profilePic} alt="" />
-          <h3 className="text-xl font-semibold">
-            {profileData.name} <strong>{profileData.age}</strong>
-          </h3>
-          <h4 className="text-gray-500">{profileData.location}</h4>
-        </div>
-        <hr className="my-4" />
-        <div className="flex justify-between">
+      <div className="max-w-md mx-auto mt-8 relative rounded-md shadow-md">
+        <div
+        className='h-32 bg-cover bg-center  rounded-t-md' 
+        style={{
+          backgroundImage: `url("src/assets/9Yle3n.jpg")`, // Replace with the actual path to your top image
+        }}/>
+        <div className="p-6 bg-white rounded-b-md shadow-md relative">
           <div className="text-center">
-            <h3 className="text-2xl font-semibold">{profileData.followers}</h3>
-            <h4 className="text-gray-500">Followers</h4>
+            <img
+              className="w-1/4 h-2/4 mx-auto mb-4 rounded-full border-4 border-white absolute -top-12 left-1/2 transform -translate-x-1/2 "
+              src={profileData.profilePic || 'src/assets/user-profile-icon.jpg'}
+              alt={profileData.name + "'s profile picture"}
+            />
+            <h3 className="text-xl mt-10 pt-2">
+              {profileData.name} <strong>{profileData.age}</strong>
+            </h3>
+            <h4 className="text-gray-500">{profileData.location}</h4>
           </div>
-          <div className="text-center">
-            <h3 className="text-2xl font-semibold">{profileData.likes}</h3>
-            <h4 className="text-gray-500">Likes</h4>
-          </div>
-          <div className="text-center">
-            <h3 className="text-2xl font-semibold">{profileData.photos}</h3>
-            <h4 className="text-gray-500">Photos</h4>
+          <hr className="my-4" />
+          <div className="flex justify-between">
+            <div className="text-center">
+              <h3 className="text-2xl font-semibold">{profileData.followers}</h3>
+              <h4 className="text-gray-500">Followers</h4>
+            </div>
+            <div className="text-center">
+              <h3 className="text-2xl font-semibold">{profileData.likes}</h3>
+              <h4 className="text-gray-500">Likes</h4>
+            </div>
+            <div className="text-center">
+              <h3 className="text-2xl font-semibold">{profileData.photos}</h3>
+              <h4 className="text-gray-500">Photos</h4>
+            </div>
           </div>
         </div>
       </div>
