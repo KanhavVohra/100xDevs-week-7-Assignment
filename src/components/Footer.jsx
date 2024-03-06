@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className="p-4 text-center border-t border-gray-500">
       <div className="flex justify-end">
         <a
-          href="https://www.linkedin.com/in/your-linkedin-profile/"
+          href="https://www.linkedin.com/in/kanhav-vohra-486a52181/"
           target="_blank"
           rel="noopener noreferrer"
           className="mx-2 hover:text-gray-400"
@@ -19,7 +19,7 @@ export const Footer = () => {
           />
         </a>
         <a
-          href="https://github.com/your-github-username"
+          href="https://github.com/KanhavVohra/100xDevs-week-7-Assignment"
           target="_blank"
           rel="noopener noreferrer"
           className="mx-2 hover:text-gray-400"
