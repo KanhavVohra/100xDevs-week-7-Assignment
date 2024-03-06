@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Navbar from '../components/navbar';
 
+import backgroundIcon from '../assets/bermuda-traingle.svg'
+import profileIcon from '../assets/user-profile-icon.svg'
+
 function Profile() {
   const [profileData, setProfileData] = useState({
     name: 'Rita Correia',
@@ -40,13 +43,13 @@ function Profile() {
         <div
         className='h-32 bg-cover bg-center  rounded-t-md' 
         style={{
-          backgroundImage: `url("src/assets/9Yle3n.jpg")`, // Replace with the actual path to your top image
+          backgroundImage:`url(${backgroundIcon})`, // Replace with the actual path to your top image
         }}/>
         <div className="p-6 bg-white rounded-b-md shadow-md relative">
           <div className="text-center">
             <img
-              className="w-1/4 h-2/4 mx-auto mb-4 rounded-full border-4 border-white absolute -top-12 left-1/2 transform -translate-x-1/2 "
-              src={profileData.profilePic || 'src/assets/user-profile-icon.jpg'}
+              className="w-1/4 h-2/4 mx-auto mb-4 rounded-full border-4 bg-slate-100 border-white absolute -top-12 left-1/2 transform -translate-x-1/2 "
+              src={profileData.profilePic || profileIcon}
               alt={profileData.name + "'s profile picture"}
             />
             <h3 className="text-xl mt-10 pt-2">
