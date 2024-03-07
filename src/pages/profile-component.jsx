@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Navbar from '../components/navbar';
 
-import backgroundIcon from '/assests/bermuda-traingle.svg'
-import profileIcon from '/assests/user-profile-icon.svg'
+import backgroundIcon from '../assets/bermuda-traingle.svg'
+import profileIcon from '../assets/user-profile-icon.svg'
 
 function Profile() {
   const [profileData, setProfileData] = useState({
