@@ -41,8 +41,8 @@ function Profile() {
       <Navbar />
       <div className="max-w-md mx-auto mt-8 relative rounded-md shadow-md">
         <div
-        className='h-32 bg-cover bg-center  rounded-t-md' 
-        style={{backgroundImage:`url(${backgroundIcon})`}}/>
+        className='h-32 bg-blue-500 rounded-t-md' />
+        {/* // style={{backgroundImage:`url(${backgroundIcon})`}}/> */}
         
         <div className="p-6 bg-white rounded-b-md shadow-md relative">
           <div className="text-center">
