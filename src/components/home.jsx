@@ -7,10 +7,10 @@ function Home() {
     <div className='flex flex-col min-h-screen'>
       <Navbar />
       <div className="flex-grow text-center">
-        <div className="flex flex-col items-center p-8">
+        <div className="flex flex-col items-center p-4 md:p-8">
           {/* Group 1: Profile, Background Changer, and OTP Login */}
-          <div className="mb-8 grid grid-cols-3 gap-4">
-            <Link to="/profile" className="w-250 bg-white rounded-md border-2 border-black shadow-xl p-4 mb-4 block">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Link to="/profile" className="w-full md:w-250 bg-white rounded-md border-2 border-black shadow-xl p-4 mb-4 block">
               <h1 className="text-2xl font-bold mb-4">Profile</h1>
               <p>
                 This component is responsible for rendering the user profile,
@@ -19,7 +19,7 @@ function Home() {
               </p>
             </Link>
 
-            <Link to="/background-changer" className="w-250 bg-white rounded-md border-2 border-black shadow-xl p-4 mb-4 block">
+            <Link to="/background-changer" className="w-full md:w-250 bg-white rounded-md border-2 border-black shadow-xl p-4 mb-4 block">
               <h1 className="text-2xl font-bold mb-4">Background Changer</h1>
               <p>
                 This component dynamically alters the background color of the page.
@@ -27,7 +27,7 @@ function Home() {
               </p>
             </Link>
 
-            <Link to="/login" className="w-250 bg-white rounded-md border-2 border-black shadow-xl p-4 mb-4 block">
+            <Link to="/login" className="w-full md:w-250 bg-white rounded-md border-2 border-black shadow-xl p-4 mb-4 block">
               <h1 className="text-2xl font-bold mb-4">Login</h1>
               <p>
                 This component facilitates user authentication, allowing login via either mobile number
@@ -37,8 +37,8 @@ function Home() {
           </div>
 
           {/* Group 2: Text Generator and Birthday */}
-          <div className='grid grid-cols-2 gap-4 px-64 '>
-            <Link to="/Text-generator" className="w-250 bg-white rounded-md border-2 border-black shadow-xl p-4 mb-4 block">
+          <div className='grid md:grid-cols-2 gap-4 p-4  md:px-64 '>
+            <Link to="/Text-generator" className="w-full md:w-250 bg-white rounded-md border-2 border-black shadow-xl p-4 mb-4 block">
               <h1 className="text-2xl font-bold mb-4">Text Generator</h1>
               <p>
                 This component empowers users to generate custom text by specifying the desired number of
@@ -46,7 +46,7 @@ function Home() {
               </p>
             </Link>
 
-            <Link to="/birthday" className="w-250 bg-white rounded-md border-2 border-black shadow-xl p-4 mb-4 block">
+            <Link to="/birthday" className="w-full md:w-250 bg-white rounded-md border-2 border-black shadow-xl p-4 mb-4 block">
               <h1 className="text-2xl font-bold mb-4">Birthday</h1>
               <p>
                 This component dynamically alters the background color of the page.
