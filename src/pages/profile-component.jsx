@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/navbar';
 
-import backgroundIcon from '../assets/bermuda-traingle.svg'
+import backgroundIcon from './assets/bermuda-traingle.svg'
 import profileIcon from '../assets/user-profile-icon.svg'
 
 function Profile() {
@@ -42,9 +42,8 @@ function Profile() {
       <div className="max-w-md mx-auto mt-8 relative rounded-md shadow-md">
         <div
         className='h-32 bg-cover bg-center  rounded-t-md' 
-        style={{
-          backgroundImage:`url(${backgroundIcon})`, // Replace with the actual path to your top image
-        }}/>
+        style={{backgroundImage:`url(${backgroundIcon})`}}/>, // Actual path to your top image
+        
         <div className="p-6 bg-white rounded-b-md shadow-md relative">
           <div className="text-center">
             <img
